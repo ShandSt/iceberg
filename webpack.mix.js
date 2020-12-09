@@ -1,0 +1,12 @@
+const {mix} = require('laravel-mix')
+
+mix.js('resources/assets/js/app.js', 'public/js')
+mix.js('resources/assets/js/checkout.js', 'public/js')
+mix.copy('resources/assets/js/html5shiv.min.js', 'public/js')
+mix.copy('resources/assets/js/main.js', 'public/js')
+mix.copy('resources/assets/js/scrollMagic_anim.js', 'public/js')
+mix.copy('resources/assets/js/vendor.js', 'public/js')
+mix.copyDirectory('resources/assets/css', 'public/css')
+mix.copyDirectory('resources/assets/img', 'public/img')
+mix.copyDirectory('resources/assets/fonts', 'public/fonts')
+mix.sass('resources/assets/sass/app.scss', 'public/css')

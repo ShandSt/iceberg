@@ -1,0 +1,15 @@
+.env
+/.idea
+/.vscode
+/node_modules/
+public/fonts/
+public/hot
+public/mix-manifest.json
+public/storage
+public/css/
+public/js/
+public/img/
+/storage/*.key
+/vendor
+npm-debug.log
+yarn-error.log

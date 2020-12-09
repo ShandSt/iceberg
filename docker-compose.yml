@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  app:
+    build: ./docker/php
+    working_dir: /app
+    volumes:
+      - .:/app
+
+  nginx:
+    build: ./docker/nginx
+    working_dir: /app/public
+    volumes:
+      - .:/app
+    ports:
+      - "80:80"
+
+  db:
+    image: mariadb
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: iceberg
+      MYSQL_ROOT_PASSWORD: secret
+    volumes:
+      - database:/var/lib/mysql
+
+volumes:
+  database:
